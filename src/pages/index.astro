@@ -1,5 +1,7 @@
 ---
 import Navigation from "../components/Navigation.astro";
+import BaseLayout from '../layouts/BaseLayout.astro';
+const pageTitle = "Página de inicio";
 ---
 
 <html lang="es">
@@ -16,5 +18,8 @@ import Navigation from "../components/Navigation.astro";
 		<script>
 			import "../scripts/menu.js";
 		</script>
+		<BaseLayout pageTitle="{pageTitle}">
+			<h2>Mi impresionante subtítulo del blog</h2>
+		  </BaseLayout>
 	</body>
 </html>
