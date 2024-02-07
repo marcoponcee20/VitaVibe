@@ -1,16 +1,23 @@
 ---
-import '../styles/global.css';
-import Footer from '../components/Footer.astro';
+import "../styles/global.css";
+import Footer from "../components/Footer.astro";
 const pageTitle = "Sobre mi";
 
 const identity = {
-  firstName: "Marco",
-  country: "España",
-  occupation: "Desarrollador",
-  hobbies: ["fútbol", "gimnasio", "estar con amigos"],
+    firstName: "Marco",
+    country: "España",
+    occupation: "Desarrollador",
+    hobbies: ["fútbol", "gimnasio", "estar con amigos"],
 };
 
-const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Redacción de documentos"];
+const skills = [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "React",
+    "Astro",
+    "Redacción de documentos",
+];
 const happy = true;
 const finished = false;
 const goal = 3;
@@ -18,37 +25,47 @@ const skillColor = "navy";
 ---
 
 <html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>{pageTitle}</title>
-    <style>
-        h1 {
-          color: purple;
-          font-size: 4rem;
-        }
-        .skill {
-            color: var(--skillColor);
-        font-weight: bold;
-  }
-      </style>
-  </head>
-  <body>
-    <a href="/">Inicio</a>
-    <a href="/blog/">Blog</a>
-    <h1>{pageTitle}</h1>
-    <p>He aquí algunos datos sobre mí:</p>
-<ul>
-  <li>Me llamo {identity.firstName}.</li>
-  <li>Vivo en {identity.country} y trabajo como {identity.occupation}.</li>
-  {identity.hobbies.length >= 2 &&
-    <li>Dos de mis aficiones son: {identity.hobbies[0]} y {identity.hobbies[1]}</li>
-  }
-</ul>
-<p>Mis habilidades son:</p>
-<ul>
-    {skills.map((skill) => <li class="skill">{skill}</li>)}
-</ul>
-<Footer />
-</body>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>{pageTitle}</title>
+        <style>
+            h1 {
+                color: purple;
+                font-size: 4rem;
+            }
+            .skill {
+                color: var(--skillColor);
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <a href="/">Inicio</a>
+        <a href="/blog/">Blog</a>
+        <h1>{pageTitle}</h1>
+        <p>He aquí algunos datos sobre mí:</p>
+        <ul>
+            <li>Me llamo {identity.firstName}.</li>
+            <li>
+                Vivo en {identity.country} y trabajo como {identity.occupation}.
+            </li>
+            {
+                identity.hobbies.length >= 2 && (
+                    <li>
+                        Dos de mis aficiones son: {identity.hobbies[0]} y{" "}
+                        {identity.hobbies[1]}
+                    </li>
+                )
+            }
+        </ul>
+        <p>Mis habilidades son:</p>
+        <ul>
+            {skills.map((skill) => <li class="skill">{skill}</li>)}
+        </ul>
+        <Footer />
+        <script>
+            import "../scripts/menu.js";
+        </script>
+    </body>
 </html>
