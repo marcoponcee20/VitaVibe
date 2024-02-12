@@ -1,42 +1,28 @@
 ---
-  import Footer from '../components/Footer.astro';
-  const allRecipes = await Astro.glob('../pages/recipes/*.md');
+import Footer from '../components/Footer.astro';
+const allPosts = await Astro.glob('../pages/posts/*.md');
 ---
 
-<!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} >
-    <title>Recetas Saludables</title>
+    <title>Astro</title>
   </head>
   <body>
-    <nav>
-      <a href="/">Inicio</a>
-      <a href="/about/">Sobre Marco</a>
-    </nav>
-
-    <header>
-      <h1>Recetas Saludables</h1>
-      <p>Explora deliciosas recetas que nutrirán tu cuerpo y mejorarán tu bienestar.</p>
-    </header>
-
-    <main>
-      <ul>
-        {allRecipes.map((recipe) => (
-          <li>
-            <a href={recipe.url}>{recipe.frontmatter.title}</a>
-          </li>
-        ))}
+    <a href="/">Inicio</a>
+    <a href="/about/">Sobre mi</a>
+    <h1>Mi blog de Astro aprendizaje</h1>
+    <p>Aquí es donde publicaré sobre mi viaje de aprendizaje Astro.</p>
+    <ul>
+      {allPosts.map((post) => <li><a href={post.url}>{post.frontmatter.title}</a></li>)}
       </ul>
-    </main>
 
-    <script type="module">
-      import "../scripts/menu.js";
-    </script>
 
-    <Footer />
+      <script>
+        import "../scripts/menu.js";
+     </script>
   </body>
 </html>
