@@ -1,24 +1,55 @@
 ---
-import Navigation from "../components/Navigation.astro";
-import BaseLayout from '../layouts/BaseLayout.astro';
-const pageTitle = "Página de inicio";
----
-
-<html lang="es">
+	import Navigation from "../components/Navigation.astro";
+	import BaseLayout from '../layouts/BaseLayout.astro';
+	const pageTitle = "Página de inicio";
+ ---
+  
+  <!DOCTYPE html>
+  <html lang="es">
 	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+	  <meta charset="utf-8" />
+	  <meta name="viewport" content="width=device-width, initial-scale=1" />
+	  <meta name="description" content="Descripción de tu sitio" />
+	  <meta name="keywords" content="palabras clave, relevantes, para, tu, sitio" />
+	  <meta name="author" content="Tu Nombre" />
+	  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	  <title>{pageTitle}</title>
+	  <link rel="stylesheet" href="/styles/main.css" />
 	</head>
 	<body>
-		<script>
-			import "../scripts/menu.js";
-		</script>
-		<BaseLayout>
-			<h1>Mi Sitio Astro</h1>
-			<h2>Mi impresionante subtítulo del blog</h2>
-		  </BaseLayout>
+	  <script type="module">
+		import "../scripts/menu.js";
+	  </script>
+  
+	  <BaseLayout>
+		<header>
+		  <Navigation />
+		</header>
+  
+		<main>
+		  <section>
+			<h1>Bienvenido a Mi Sitio Astro</h1>
+			<p>Explora contenido increíble y descubre nuevas experiencias.</p>
+		  </section>
+  
+		  <section>
+			<h2>Últimas Publicaciones</h2>
+			<!-- Aquí puedes agregar un bucle para mostrar las últimas publicaciones -->
+			<article>
+			  <h3>Título de la Publicación</h3>
+			  <p>Contenido de la publicación...</p>
+			  <a href="/blog/post-1">Leer más</a>
+			</article>
+  
+			<!-- Repite el bloque anterior para más publicaciones -->
+  
+		  </section>
+		</main>
+  
+		<footer>
+		  <p>&copy; 2024 Mi Sitio Astro. Todos los derechos reservados.</p>
+		</footer>
+	  </BaseLayout>
 	</body>
-</html>
+  </html>
+  
