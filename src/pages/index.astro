@@ -1,16 +1,16 @@
 ---
 	import Navigation from "../components/Navigation.astro";
 	import BaseLayout from '../layouts/BaseLayout.astro';
-	const pageTitle = "Página de inicio";
- ---
+	const pageTitle = "Bienestar Total";
+---
   
   <!DOCTYPE html>
   <html lang="es">
 	<head>
 	  <meta charset="utf-8" />
 	  <meta name="viewport" content="width=device-width, initial-scale=1" />
-	  <meta name="description" content="Descripción de tu sitio" />
-	  <meta name="keywords" content="palabras clave, relevantes, para, tu, sitio" />
+	  <meta name="description" content="Descubre el camino hacia el bienestar total con nuestro contenido inspirador y práctico." />
+	  <meta name="keywords" content="bienestar, salud, mentalidad positiva, equilibrio, vida plena" />
 	  <meta name="author" content="Tu Nombre" />
 	  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 	  <title>{pageTitle}</title>
@@ -28,26 +28,31 @@
   
 		<main>
 		  <section>
-			<h1>Bienvenido a Mi Sitio Astro</h1>
-			<p>Explora contenido increíble y descubre nuevas experiencias.</p>
+			<h1>Bienestar Total</h1>
+			<p>Descubre el camino hacia una vida plena y saludable a través de nuestro contenido inspirador y práctico. Bienvenido a un viaje de autodescubrimiento y equilibrio.</p>
 		  </section>
   
 		  <section>
-			<h2>Últimas Publicaciones</h2>
-			<!-- Aquí puedes agregar un bucle para mostrar las últimas publicaciones -->
+			<h2>Consejos para el Bienestar</h2>
 			<article>
-			  <h3>Título de la Publicación</h3>
-			  <p>Contenido de la publicación...</p>
-			  <a href="/blog/post-1">Leer más</a>
+			  <h3>Mindfulness en la Rutina Diaria</h3>
+			  <p>Practica la atención plena para reducir el estrés y mejorar tu bienestar emocional. Encuentra paz en cada momento.</p>
+			  <a href="/mindfulness">Leer más</a>
 			</article>
   
-			<!-- Repite el bloque anterior para más publicaciones -->
+			<article>
+			  <h3>Alimentación Saludable</h3>
+			  <p>Descubre recetas nutritivas y consejos para mantener una dieta equilibrada que nutra tu cuerpo y mente.</p>
+			  <a href="/alimentacion">Leer más</a>
+			</article>
+  
+			<!-- Puedes agregar más artículos relacionados con el bienestar -->
   
 		  </section>
 		</main>
   
 		<footer>
-		  <p>&copy; 2024 Mi Sitio Astro. Todos los derechos reservados.</p>
+		  <p>&copy; {new Date().getFullYear()} Bienestar Total. Todos los derechos reservados.</p>
 		</footer>
 	  </BaseLayout>
 	</body>
