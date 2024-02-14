@@ -1,12 +1,11 @@
----
 layout: ../../layouts/MarkdownPostLayout.astro
-title: Mi cuarta entrada en el blog
-author: Alumno de Astro
-description: "Esta entrada aparecerá sola!"
+title: 'Bienestar Integral con Astro: Continuando el Camino hacia la Plenitud'
+author: 'Alumno de Astro'
+description: 'Explorando cómo el bienestar integral se entrelaza con mi viaje Astro.'
 image:
-  url: "https://docs.astro.build/default-og-image.png"
-  alt: "La palabra 'astro' contra una ilustración de planetas y estrellas."
+  url: 'https://docs.astro.build/default-og-image.png'
+  alt: 'La palabra "astro" contra una ilustración de planetas y estrellas.'
 pubDate: 2022-08-08
-tags: ["astro", "éxitos"]
+tags: ["astro", "bienestar"]
 ---
-Esta entrada debería aparecer con las demás entradas de mi blog, porque `Astro.glob()` está devolviendo una lista de todas mis entradas para crear mi lista.
+Esta entrada se presenta de manera única en mi blog, destacando la importancia del bienestar integral. A través de `Astro.glob()`, estoy construyendo una lista que refleja mi progreso en el camino hacia la plenitud y el bienestar.
