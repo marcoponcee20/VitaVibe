@@ -1,10 +1,7 @@
 ---
 import Footer from '../components/Footer.astro';
 const allPosts = await Astro.glob('../pages/posts/*.md');
----
-// Renderiza los posts
-export default function render() {
-  
+---  
     <html lang="es">
       <head>
         <meta charset="utf-8" />
@@ -34,6 +31,7 @@ export default function render() {
             ))}
           </ul>
         </main>
+        
 
         {/* Pie de página con enlaces relacionados al bienestar y Astro */}
         <footer>
