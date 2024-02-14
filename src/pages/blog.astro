@@ -1,52 +1,54 @@
 ---
 import Footer from '../components/Footer.astro';
-const allPosts = await Astro.glob('./src/pages/posts/*.md');
----
-<html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Bienestar con Astro</title>
-  </head>
-  <body>
-    {/* Encabezado de la página */}
-    <header>
-      <nav>
-        <a href="/">Inicio</a>
-        <a href="/about/">Sobre mí</a>
-      </nav>
-      <h1>Bienestar con Astro</h1>
-    </header>
+const allPosts = await Astro.glob('../pages/posts/*.md');
+---  
+    <html lang="es">
+      <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Bienestar con Astro</title>
+      </head>
+      <body>
+        {/* Encabezado de la página */}
+        <header>
+          <nav>
+            <a href="/">Inicio</a>
+            <a href="/about/">Sobre mí</a>
+          </nav>
+          <h1>Bienestar con Astro</h1>
+        </header>
 
-    {/* Contenido principal */}
-    <main>
-      <p>Bienvenido a mi blog dedicado al bienestar y Astro aprendizaje.</p>
-      <ul>
+        {/* Contenido principal */}
+        <main>
+          <p>Bienvenido a mi blog dedicado al bienestar y Astro aprendizaje.</p>
+          <ul>
+            <li>
+              <a href="src/posts/post-1.md">Bienestar emocional</a>
+            </li>
+          </ul>
+        </main>
         
-          <li>
-            <a href="./src/pages/posts/post-1.md">Posts</a>
-          </li>
-      
-      </ul>
-    </main>
+        
 
-    {/* Pie de página con enlaces relacionados al bienestar y Astro */}
-    <footer>
-      <p>Explora más sobre el bienestar con Astro:</p>
-      <ul>
-        <li><a href="/wellness/">Bienestar emocional</a></li>
-        <li><a href="/astro-learning/">Recursos de aprendizaje Astro</a></li>
-      </ul>
-    </footer>
+        {/* Pie de página con enlaces relacionados al bienestar y Astro */}
+        <footer>
+          <p>Explora más sobre el bienestar con Astro:</p>
+          <ul>
+            <li><a href="/wellness/">Bienestar emocional</a></li>
+            <li><a href="/astro-learning/">Recursos de aprendizaje Astro</a></li>
+          </ul>
+        </footer>
 
-    {/* Script para importar el menú */}
-    <script>
-      import "../scripts/menu.js";
-    </script>
+        {/* Script para importar el menú */}
+        <script>
+          import "../scripts/menu.js";
+        </script>
 
-    {/* Importa el componente Footer */}
-    <Footer />
-  </body>
-</html>
+        {/* Importa el componente Footer */}
+        <Footer />
+      </body>
+    </html>
+  
+}
